@@ -16,11 +16,11 @@ public:
 
     // IzWaifuCharacterPlugin interface
 public:
-    virtual void initialize(QSharedPointer<const AzWaifuEngine> engine) override;
+    virtual void initialize(QSharedPointer<AzWaifuEngine> engine) override;
     virtual QString modelName() const override;
     virtual QString modelFileName() const override;
     virtual QByteArray loadFile(const QString &relativePath) const override;
-    virtual QUuid id() const override;
+    virtual QUuid characterId() const override;
 
 private:
     static const QString _modelName;

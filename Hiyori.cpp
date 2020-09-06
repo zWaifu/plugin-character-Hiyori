@@ -9,7 +9,7 @@ Hiyori::Hiyori()
 {
 }
 
-void Hiyori::initialize(QSharedPointer<const AzWaifuEngine> engine)
+void Hiyori::initialize(QSharedPointer<AzWaifuEngine> engine)
 {
     _engine = engine;
 }
@@ -46,7 +46,7 @@ QByteArray Hiyori::loadFile(const QString &relativePath) const
     }
 }
 
-QUuid Hiyori::id() const
+QUuid Hiyori::characterId() const
 {
     return _modelId;
 }
